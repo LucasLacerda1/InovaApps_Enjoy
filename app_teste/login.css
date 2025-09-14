@@ -1,0 +1,26 @@
+/* =========================== */
+/* Estilos da Página de Login  */
+/* =========================== */
+.login-container {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    backdrop-filter: blur(10px);
+}
+.choice-button {
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+.choice-button:hover { 
+    transform: scale(1.05); 
+}

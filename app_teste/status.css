@@ -1,0 +1,382 @@
+/* ======================================= */
+/* Estilos da Página de Status do Membro   */
+/* ======================================= */
+.status-body {
+    background-color: #f0ebe5;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 3rem 1.5rem;
+}
+
+.status-container {
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 2.5rem;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+/* --- Botão Voltar --- */
+.back-link {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    text-decoration: none;
+    color: #888;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+.back-link:hover {
+    color: #b9955a;
+}
+
+/* --- Título Principal --- */
+.main-title {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 300;
+    letter-spacing: 0.2em;
+    color: #a0aec0;
+    margin-bottom: 2rem;
+}
+
+/* --- Cabeçalho do Perfil --- */
+.profile-header {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+@media (min-width: 400px) { 
+    .profile-header {
+        flex-direction: row;
+        text-align: left;
+    }
+}
+.profile-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+}
+.profile-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.profile-company {
+    color: #777;
+    margin-bottom: 0.5rem;
+}
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+.social-icon {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #555;
+}
+
+/* --- Biografia --- */
+.profile-bio {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 2.5rem;
+}
+
+/* --- Grid de Estatísticas --- */
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+@media (min-width: 400px) { 
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size: 1.1rem;
+    background-color: #f8f8f8;
+    padding: 1rem;
+    border-radius: 8px;
+}
+.stat-item p {
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 0.25rem;
+}
+.stat-item span {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+/* --- Valor Total --- */
+.total-value {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+    background-color: #f8f8f8;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+.total-value p {
+    font-size: 1rem;
+    color: #888;
+    font-weight: 500;
+}
+.total-value span {
+    font-size: 1.5rem;
+    color: #d4af37;
+}
+
+/* --- Recomendação --- */
+.recommendation {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+.recommendation strong {
+    font-weight: 700;
+}
+.recommendation p {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.premium-star {
+    width: 1em;
+    height: 1em;
+    fill: none;
+    stroke: #d4af37;
+    stroke-width: 1.5;
+}
+
+/* --- Botões de Ação --- */
+.action-buttons {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 2rem;
+    border-top: 1px solid #eee;
+    padding-top: 2rem;
+}
+
+.btn {
+    flex: 1;
+    padding: 0.75rem 0.5rem;
+    border-radius: 6px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.85rem;
+    transition: all 0.2s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    white-space: nowrap;
+}
+
+.btn svg {
+    width: 1.1em;
+    height: 1.1em;
+}
+
+.btn.btn-secondary {
+    background-color: transparent;
+    color: #b9955a;
+    border: 1px solid #b9955a;
+}
+.btn.btn-secondary:hover {
+    background-color: #b9955a;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* --- Selo Final --- */
+.footer-seal {
+    text-align: center;
+    margin-top: 2.5rem;
+}
+.seal-logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+    color: #b9955a;
+    line-height: 1;
+}
+.seal-text {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.2em;
+    color: #777;
+    font-weight: 500;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 480px) {
+    .action-buttons {
+        flex-direction: column;
+    }
+}
+
+/* --- Modal de Confirmação --- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(12, 17, 31, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 1;
+}
+.modal-overlay.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+.modal-panel {
+    background-color: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    transition: transform 0.3s ease-in-out;
+    transform: scale(1);
+}
+.modal-overlay.hidden .modal-panel {
+    transform: scale(0.95);
+}
+.modal-panel svg {
+    color: #b9955a;
+    margin-bottom: 1rem;
+}
+.modal-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+.modal-text {
+    color: #777;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+.modal-button {
+    background-color: #b9955a;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 0.8rem 1.5rem;
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.modal-button:hover {
+    background-color: #a0834f;
+}
+
+/* --- ESTILOS ADICIONAIS PARA O MODAL DE INDICAÇÃO --- */
+.search-input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+.member-list {
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    text-align: left;
+    margin-bottom: 2rem;
+}
+.member-item {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.member-item:last-child {
+    border-bottom: none;
+}
+.member-item:hover {
+    background-color: #f8f8f8;
+}
+.member-item.selected {
+    background-color: #f0ebe5;
+    font-weight: 700;
+}
+.member-item-name {
+    font-size: 1rem;
+    color: #333;
+}
+.member-item-company {
+    font-size: 0.85rem;
+    color: #888;
+}
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+.modal-button-secondary {
+    background-color: #e2e8f0;
+    color: #4a5568;
+    border: none;
+    border-radius: 6px;
+    padding: 0.8rem 1.5rem;
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.modal-button-secondary:hover {
+    background-color: #cbd5e0;
+}
+.modal-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Relatórios - Enjoy 2025</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../base.css">
+  <link rel="stylesheet" href="../dashboard.css"> <link rel="stylesheet" href="../relatorio.css">  </head>
+<body class="dashboard-body">
+
+  <header class="dashboard-header">
+    <div class="header-container">
+      <h1 class="logo">ENJOY <span class="text-gold">2025</span></h1>
+      <button class="menu-toggle" aria-controls="primary-navigation" aria-expanded="false">
+        <span class="sr-only">Abrir menu</span>
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="6"  x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+      <nav id="primary-navigation" class="main-nav">
+        <a href="dashboard.html">Home</a>
+        <a href="sobre.html">Sobre Nós</a>
+        <a href="membros.html">Membros</a>
+        <a href="parceiras.html">Empresas Parceiras</a>
+        <a href="ceo.html">Mensagem do CEO</a>
+        <a href="contato.html">Contato</a>
+        <a href="relatorio.html" class="admin-only" style="display: none; color: #f6ad55;">Relatórios</a>
+        <a href="index.html" class="logout-link">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="hero-section pt-24">
+    <div class="reports-wrap px-4 md:px-6">
+
+      <div class="flex items-center justify-between gap-3 mb-6">
+        <div>
+          <h2 class="hero-title m-0">Relatórios <span class="text-gold">2025</span></h2>
+          <p class="hero-subtitle mt-1">Visão geral de negócios, indicações e valores acumulados.</p>
+        </div>
+        <div class="flex gap-2">
+          <button id="btnExport" class="btn-gold">Exportar CSV</button>
+          <button id="btnPrint" class="btn-ghost">Imprimir</button>
+        </div>
+      </div>
+
+      <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-6">
+        <div class="kpi"><div class="label">Negócios Fechados</div><div id="kpiDeals" class="value">—</div></div>
+        <div class="kpi"><div class="label">Valor Total (R$)</div><div id="kpiValue" class="value">—</div></div>
+        <div class="kpi"><div class="label">Indicações Recebidas</div><div id="kpiRefIn" class="value">—</div></div>
+        <div class="kpi"><div class="label">Indicações Fornecidas</div><div id="kpiRefOut" class="value">—</div></div>
+      </section>
+
+      <section class="mb-6">
+        <div class="rounded-xl border border-slate-200 p-4">
+          <h3 class="font-semibold mb-3">Filtros</h3>
+          <div class="grid filters-grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+            <div>
+              <label class="block text-sm text-slate-600 mb-1" for="fInicio">Início</label>
+              <input id="fInicio" type="date" class="w-full border rounded-lg px-3 py-2">
+            </div>
+            <div>
+              <label class="block text-sm text-slate-600 mb-1" for="fFim">Fim</label>
+              <input id="fFim" type="date" class="w-full border rounded-lg px-3 py-2">
+            </div>
+            <div>
+              <label class="block text-sm text-slate-600 mb-1" for="fMembro">Membro</label>
+              <input id="fMembro" type="text" placeholder="Ex.: José Favato" class="w-full border rounded-lg px-3 py-2">
+            </div>
+            <div>
+              <label class="block text-sm text-slate-600 mb-1" for="fTipo">Tipo</label>
+              <select id="fTipo" class="w-full border rounded-lg px-3 py-2">
+                <option value="">Todos</option><option value="negocio">Negócio</option><option value="indicacao">Indicação</option>
+              </select>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mt-3">
+            <div>
+              <label class="block text-sm text-slate-600 mb-1" for="fStatus">Status</label>
+              <select id="fStatus" class="w-full border rounded-lg px-3 py-2">
+                <option value="">Todos</option><option value="concluido">Concluído</option><option value="pendente">Pendente</option><option value="cancelado">Cancelado</option>
+              </select>
+            </div>
+            <div class="sm:col-span-1 lg:col-span-2 flex gap-2 items-end">
+              <button id="btnFiltrar" class="btn-gold">Aplicar filtros</button>
+              <button id="btnLimpar" class="btn-ghost">Limpar</button>
+              <span id="activeFilters" class="chip hidden">0 filtros ativos</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="table-wrap mb-4">
+        <table id="tblRel" aria-label="Tabela de relatórios">
+          <thead><tr><th>Data</th><th>Membro</th><th>Tipo</th><th>Descrição</th><th>Valor (R$)</th><th>Status</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </section>
+
+      <div class="flex items-center justify-between mt-3">
+        <p id="pageInfo" class="text-sm text-slate-600">—</p>
+        <div class="flex gap-2">
+          <button id="prevPage" class="btn-ghost">Anterior</button>
+          <button id="nextPage" class="btn-ghost">Próxima</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="../main.js" defer></script>
+</body>
+</html>

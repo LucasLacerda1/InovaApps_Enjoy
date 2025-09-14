@@ -1,0 +1,99 @@
+/* ======================================= */
+/* Estilos da Página "Mensagem do CEO"     */
+/* ======================================= */
+.ceo-body {
+    background-color: #f0ebe5; /* Fundo bege claro */
+    font-family: 'Poppins', sans-serif;
+    color: #555; /* Cor de texto principal */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 120px; /* Espaço para o header fixo */
+    padding-bottom: 4rem;
+}
+
+/* --- ESTILOS DO CABEÇALHO ANTIGO FORAM REMOVIDOS DESTE ARQUIVO --- */
+/* --- O cabeçalho agora é controlado pelo arquivo dashboard.css --- */
+
+
+/* --- Card Principal --- */
+.ceo-container {
+    max-width: 800px;
+    width: 100%;
+    padding: 2rem;
+}
+
+.message-card {
+    position: relative;
+    padding-left: 40px; /* Espaço para a linha decorativa */
+    border-left: 2px solid #ddd;
+    padding-bottom: 2rem;
+}
+
+/* --- Foto do CEO --- */
+.ceo-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    top: -60px; /* Metade para fora do card */
+    left: -62px; /* Metade para fora da linha */
+    border: 4px solid #f0ebe5; /* Borda da cor do fundo para criar separação */
+}
+
+/* --- Conteúdo da Mensagem --- */
+.message-content {
+    padding-top: 80px; /* Espaço para a foto */
+}
+.message-greeting {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+.message-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+}
+.message-text strong {
+    font-weight: 700;
+    color: #0c111f;
+}
+
+/* --- Assinatura --- */
+.signature {
+    text-align: right;
+    margin-top: 2rem;
+}
+.signature-name {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #0c111f;
+}
+.signature-title {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #777;
+}
+
+/* --- Logo no Rodapé --- */
+.footer-logo {
+    margin-top: 4rem;
+    text-align: center;
+}
+.comunidade-text {
+    font-size: 0.9rem;
+    letter-spacing: 0.2em;
+    color: #999;
+}
+.disruption-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    color: #b9955a; /* Dourado */
+}

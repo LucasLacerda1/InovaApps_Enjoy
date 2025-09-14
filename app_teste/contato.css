@@ -1,0 +1,133 @@
+/* ======================================= */
+/* Estilos da Página de Contato            */
+/* ======================================= */
+.contact-body {
+    background-color: #0c111f; /* Fundo azul escuro */
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    padding-top: 100px; /* Espaço para o header fixo */
+    padding-bottom: 4rem;
+}
+
+/* --- ESTILOS DO CABEÇALHO ANTIGO FORAM REMOVIDOS DESTE ARQUIVO --- */
+/* --- O cabeçalho agora é controlado pelo arquivo dashboard.css --- */
+
+
+/* --- Conteúdo Principal --- */
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+.contact-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+.contact-cta-button {
+    background-color: #b9955a;
+    color: #0c111f;
+    padding: 0.5rem 1.5rem;
+    border-radius: 999px;
+    font-weight: 500;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    text-decoration: none;
+}
+.contact-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.contact-subtitle {
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: #a0aec0;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}
+@media (min-width: 1024px) {
+    .contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+.info-column, .form-column {
+    background-color: #1a2a3a;
+    border-radius: 16px;
+    padding: 2.5rem;
+}
+.column-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+.info-group {
+    margin-bottom: 2rem;
+}
+.info-label {
+    font-weight: 500;
+    color: #a0aec0;
+    margin-bottom: 0.5rem;
+}
+.info-data {
+    font-weight: 300;
+    line-height: 1.6;
+}
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #4a5568;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+    text-decoration: none;
+    color: white;
+}
+.social-icon:hover {
+    background-color: #b9955a;
+    color: #0c111f;
+    border-color: #b9955a;
+}
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.contact-form input, .contact-form textarea {
+    background-color: #0c111f;
+    border: 1px solid #4a5568;
+    border-radius: 8px;
+    padding: 1rem;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+}
+.contact-form input:focus, .contact-form textarea:focus {
+    outline: none;
+    border-color: #b9955a;
+}
+.contact-form button {
+    background-color: #b9955a;
+    color: #0c111f;
+    font-weight: 700;
+    padding: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border: none;
+}
+.contact-form button:hover {
+    background-color: #d1b07e;
+}

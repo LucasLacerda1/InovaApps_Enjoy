@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnóstico - Enjoy</title>
+    <!-- Dependências -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+    <!-- Links Corrigidos -->
+    <link rel="stylesheet" href="../base.css">
+    <link rel="stylesheet" href="../convidado.css">
+</head>
+<body class="carousel-body">
+
+    <header class="carousel-header">
+        <a href="index.html" class="font-enjoy text-4xl font-light">Enjoy</a>
+    </header>
+
+    <main id="carousel-container" class="carousel-container">
+        <!-- Slide 1: Convidado -->
+        <section class="form-slide active">
+            <div class="question-header"><span class="question-number">1 →</span><h2 class="question-title">Por qual membro da Disruption você foi convidado(a)?*</h2></div>
+            <input type="text" class="carousel-input" placeholder="Digite sua resposta aqui...">
+            <button class="ok-button">OK</button>
+        </section>
+        <!-- Slides 2 a 11 e Final... -->
+        <section class="form-slide">
+            <div class="question-header"><span class="question-number">2 →</span><h2 class="question-title">Queremos saber mais sobre você</h2></div>
+            <div class="w-full max-w-lg space-y-4">
+                <input type="text" class="carousel-input" placeholder="Nome"><input type="text" class="carousel-input" placeholder="Sobrenome"><input type="tel" class="carousel-input" placeholder="Telefone"><input type="email" class="carousel-input" placeholder="E-mail"><input type="text" class="carousel-input" placeholder="Empresa">
+            </div>
+            <button class="ok-button mt-4">OK</button>
+        </section>
+        <section class="form-slide">
+             <div class="question-header"><span class="question-number">3 →</span><h2 class="question-title">Qual é o estágio atual da sua empresa?*</h2></div>
+             <p class="question-subtitle">Podes selecionar várias opções</p>
+            <div class="choices-container" data-multi-select="true">
+                <button class="choice-option"><div><span>A</span>Buscando estabilidade</div><span class="checkmark">✓</span></button>
+                <button class="choice-option"><div><span>B</span>Crescendo, mas sem escalar com consistência</div><span class="checkmark">✓</span></button>
+                <button class="choice-option"><div><span>C</span>Já escalo, mas preciso mais autonomia e visão estratégica</div><span class="checkmark">✓</span></button>
+                <button class="choice-option"><div><span>D</span>Tenho estrutura, mas sinto que bati no teto</div><span class="checkmark">✓</span></button>
+            </div>
+            <button class="ok-button">OK</button>
+        </section>
+        <section class="form-slide">
+            <div class="question-header"><span class="question-number">4 →</span><h2 class="question-title">Qual é sua faixa de faturamento anual?*</h2></div>
+            <div class="choices-container" data-multi-select="false">
+                <button class="choice-option"><div><span>A</span>R$ 20.000,00 a R$ 360.000,00</div><span class="checkmark">✓</span></button>
+                <button class="choice-option"><div><span>B</span>R$ 360.000,00 a R$ 2.000.000,00</div><span class="checkmark">✓</span></button>
+                <button class="choice-option"><div><span>C</span>R$ 2.000.000,00 a R$ 5.000.000,00</div><span class="checkmark">✓</span></button>
+                <button class="choice-option"><div><span>D</span>R$ 5.000.000,00 a R$ 50.000.000,00</div><span class="checkmark">✓</span></button>
+                <button class="choice-option"><div><span>E</span>R$ 50.000.000,00 a R$ 150.000.000,00</div><span class="checkmark">✓</span></button>
+                <button class="choice-option"><div><span>F</span>Acima de R$ 150.000.000,00</div><span class="checkmark">✓</span></button>
+            </div>
+            <button class="ok-button">OK</button>
+        </section>
+        <section class="form-slide">
+            <div class="question-header"><span class="question-number">5 →</span><h2 class="question-title">Quantas pessoas trabalham com você hoje?*</h2></div>
+            <p class="question-subtitle">Podes selecionar várias opções</p>
+            <div class="choices-container" data-multi-select="false">
+                <button class="choice-option"><div><span>A</span>0 a 3 colaboradores</div><span class="checkmark">✓</span></button>
+                <button class="choice-option"><div><span>B</span>4 a 6 colaboradores</div><span class="checkmark">✓</span></button>
+                <button class="choice-option"><div><span>C</span>7 a 15 colaboradores</div><span class="checkmark">✓</span></button>
+                <button class="choice-option"><div><span>D</span>16 a 30 colaboradores</div><span class="checkmark">✓</span></button>
+                <button class="choice-option"><div><span>E</span>31 a 50 colaboradores</div><span class="checkmark">✓</span></button>
+                <button class="choice-option"><div><span>F</span>51 a 100 colaboradores</div><span class="checkmark">✓</span></button>
+                <button class="choice-option"><div><span>G</span>101 a 300 colaboradores</div><span class="checkmark">✓</span></button>
+                <button class="choice-option"><div><span>H</span>Mais de 300 colaboradores</div><span class="checkmark">✓</span></button>
+            </div>
+            <button class="ok-button">OK</button>
+        </section>
+        <section class="form-slide">
+            <div class="question-header"><span class="question-number">6 →</span><h2 class="question-title">O que você sente ao pensar no comercial da sua empresa hoje?*</h2></div>
+            <p class="question-subtitle">Podes selecionar várias opções</p>
+            <div class="choices-container" data-multi-select="true">
+                <button class="choice-option"><div><span>A</span>Um bombeiro apagando incêndios diários</div><span class="checkmark">✓</span></button>
+                <button class="choice-option"><div><span>B</span>Um líder com ideias, mas afogado na operação</div><span class="checkmark">✓</span></button>
+                <button class="choice-option"><div><span>C</span>Um gestor cansado de decidir tudo sozinho</div><span class="checkmark">✓</span></button>
+                <button class="choice-option"><div><span>D</span>Um visionário pronto pra romper de verdade</div><span class="checkmark">✓</span></button>
+            </div>
+            <button class="ok-button">OK</button>
+        </section>
+        <section class="form-slide">
+            <div class="question-header"><span class="question-number">7 →</span><h2 class="question-title">Quais são os principais desafios que você enfrenta hoje?*</h2></div>
+            <p class="question-subtitle">Podes selecionar várias opções</p>
+            <div class="choices-container md:grid md:grid-cols-2 md:gap-x-4">
+                <button class="choice-option"><div><span>A</span>Vendas estagnadas ou imprevisíveis</div><span class="checkmark">✓</span></button>
+                <button class="choice-option"><div><span>B</span>Falta de tempo para pensar estrategicamente</div><span class="checkmark">✓</span></button>
+                <button class="choice-option"><div><span>C</span>Gestão de pessoas e lideranças ineficazes</div><span class="checkmark">✓</span></button>
+                <button class="choice-option"><div><span>D</span>Processos mal definidos ou inexistentes</div><span class="checkmark">✓</span></button>
+                <button class="choice-option"><div><span>E</span>Equipe que não acompanha meu ritmo</div><span class="checkmark">✓</span></button>
+                <button class="choice-option"><div><span>F</span>Baixa retenção de clientes</div><span class="checkmark">✓</span></button>
+                <button class="choice-option"><div><span>G</span>Marketing que não gera resultado real</div><span class="checkmark">✓</span></button>
+                <button class="choice-option"><div><span>H</span>Estou cansado de fazer tudo sozinho</div><span class="checkmark">✓</span></button>
+                <button class="choice-option"><div><span>I</span>Dificuldade de delegar ou confiar</div><span class="checkmark">✓</span></button>
+                <button class="choice-option"><div><span>J</span>Baixo lucro, mesmo com faturamento razoável</div><span class="checkmark">✓</span></button>
+                <button class="choice-option"><div><span>K</span>Me sinto desconectado de empresários como eu</div><span class="checkmark">✓</span></button>
+                <button class="choice-option"><div><span>L</span>Dificuldade em transformar conhecimento em execução</div><span class="checkmark">✓</span></button>
+            </div>
+            <button class="ok-button">OK</button>
+        </section>
+        <section class="form-slide">
+            <div class="question-header"><span class="question-number">8 →</span><h2 class="question-title">O que você mais quer evitar nos próximos meses?*</h2></div>
+            <p class="question-subtitle">Podes selecionar várias opções</p>
+            <div class="choices-container">
+                <button class="choice-option"><div><span>A</span>Continuar no mesmo lugar</div><span class="checkmark">✓</span></button>
+                <button class="choice-option"><div><span>B</span>Crescer desorganizado e perder o controle</div><span class="checkmark">✓</span></button>
+                <button class="choice-option"><div><span>C</span>Perder bons talentos por falta de direção</div><span class="checkmark">✓</span></button>
+                <button class="choice-option"><div><span>D</span>Tomar decisões sem ter com quem trocar</div><span class="checkmark">✓</span></button>
+                <button class="choice-option"><div><span>E</span>Depender só de tentativa e erro</div><span class="checkmark">✓</span></button>
+            </div>
+            <button class="ok-button">OK</button>
+        </section>
+        <section class="form-slide">
+            <div class="question-header"><span class="question-number">9 →</span><h2 class="question-title">O que você busca ao preencher esse formulário?*</h2></div>
+            <p class="question-subtitle">Podes selecionar várias opções</p>
+            <div class="choices-container">
+                <button class="choice-option"><div><span>A</span>Um plano estratégico real e sob medida</div><span class="checkmark">✓</span></button>
+                <button class="choice-option"><div><span>B</span>Fazer parte de uma comunidade empresarial que troca e cresce junto</div><span class="checkmark">✓</span></button>
+                <button class="choice-option"><div><span>C</span>Mentoria com quem já viveu o que eu estou passando</div><span class="checkmark">✓</span></button>
+                <button class="choice-option"><div><span>D</span>Mais clareza e direcionamento para o que vem agora</div><span class="checkmark">✓</span></button>
+            </div>
+            <button class="ok-button">OK</button>
+        </section>
+        <section class="form-slide">
+            <div class="question-header"><span class="question-number">10 →</span><h2 class="question-title">Quando você gostaria de começar essa transformação?*</h2></div>
+            <div class="choices-container" data-multi-select="false">
+                <button class="choice-option"><div><span>A</span>Quando sobrar tempo</div><span class="checkmark">✓</span></button>
+                <button class="choice-option"><div><span>B</span>Ainda esse semestre</div><span class="checkmark">✓</span></button>
+                <button class="choice-option"><div><span>C</span>Agora — porque já entendi que esperar custa caro</div><span class="checkmark">✓</span></button>
+                <button class="choice-option"><div><span>D</span>Já comecei internamente, só preciso de direção</div><span class="checkmark">✓</span></button>
+            </div>
+            <button class="ok-button">OK</button>
+        </section>
+        <section class="form-slide">
+            <div class="question-header"><span class="question-number">11 →</span><h2 class="question-title">Como prefere ser contatado(a)?*</h2></div>
+            <p class="question-subtitle">Podes selecionar várias opções</p>
+            <div class="choices-container">
+                <button class="choice-option"><div><span></span>WhatsApp</div><span class="checkmark">✓</span></button>
+                <button class="choice-option"><div><span></span>E-mail</div><span class="checkmark">✓</span></button>
+                <button class="choice-option"><div><span></span>Ligação direta</div><span class="checkmark">✓</span></button>
+            </div>
+            <button class="ok-button">Enviar</button>
+        </section>
+        <section class="form-slide">
+             <div class="question-header">
+                <h2 class="question-title text-4xl">Obrigado!</h2>
+                <p class="question-subtitle mt-4">Seu diagnóstico foi enviado. Entraremos em contato em breve.</p>
+            </div>
+            <button id="finish-button" class="ok-button">Voltar ao Início</button>
+        </section>
+    </main>
+    <footer class="carousel-footer">
+        <p>Powered by Typeform</p>
+        <div class="carousel-nav">
+            <button id="prev-slide">▲</button>
+            <button id="next-slide">▼</button>
+        </div>
+    </footer>
+    <!-- Script Corrigido -->
+    <script src="../main.js" defer></script>
+</body>
+</html>

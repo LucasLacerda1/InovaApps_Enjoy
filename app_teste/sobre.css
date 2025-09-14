@@ -1,0 +1,209 @@
+/* ======================================= */
+/* Estilos da Página "Sobre Nós"           */
+/* ======================================= */
+
+/* --- O cabeçalho é controlado pelo arquivo dashboard.css --- */
+
+
+/* --- Estilos do Conteúdo da Página --- */
+.about-body {
+    background-color: #0c111f; /* CORRIGIDO */
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+}
+.about-main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 120px 2rem 4rem; /* Padding superior para compensar o header fixo */
+}
+.tag {
+    background-color: #b9955a;
+    color: #0c111f;
+    padding: 0.5rem 1.5rem;
+    border-radius: 999px;
+    font-weight: 500;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+.about-section {
+    padding: 4rem 0;
+    text-align: center;
+}
+.about-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+.section-subtitle {
+    color: #a0aec0;
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+}
+.cta-button {
+    background-color: #b9955a;
+    color: #0c111f;
+    padding: 0.8rem 2rem;
+    border-radius: 4px;
+    font-weight: 700;
+    display: inline-block;
+    transition: all 0.3s;
+    margin-top: 2rem;
+    text-decoration: none;
+}
+.cta-button:hover {
+    background-color: #d1b07e;
+    transform: translateY(-2px);
+}
+.about-hero {
+    text-align: center;
+    padding: 4rem 0;
+}
+.about-hero h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 1.5rem;
+}
+.about-hero h1 .highlight {
+    color: #b9955a;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 8px;
+}
+.about-hero p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    color: #a0aec0;
+    line-height: 1.7;
+}
+.history-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: left;
+    align-items: center;
+}
+@media (min-width: 1024px) {
+    .history-grid { grid-template-columns: 1fr 1fr; }
+}
+.history-text h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.history-text p {
+    color: #a0aec0;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+.quote-box {
+    border-left: 3px solid #b9955a;
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+}
+.quote-box p {
+    font-style: italic;
+    color: #fff;
+}
+.history-image {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+}
+.history-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.image-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.6);
+    padding: 1.5rem;
+    backdrop-filter: blur(5px);
+}
+.image-caption h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.pillars-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+}
+@media (min-width: 768px) {
+    .pillars-container { grid-template-columns: repeat(3, 1fr); }
+}
+.pillar-card {
+    background-color: #1a2a3a;
+    border-radius: 16px;
+    padding: 2.5rem;
+    border-top: 4px solid #b9955a;
+}
+.pillar-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.pillar-card h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.pillar-card p {
+    color: #a0aec0;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+.pillar-card a {
+    color: #b9955a;
+    font-weight: 500;
+    text-decoration: none;
+}
+.ceo-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: center;
+    background-color: #1a2a3a;
+    border-radius: 16px;
+    padding: 3rem;
+    text-align: left;
+    margin-top: 4rem;
+}
+@media (min-width: 1024px) {
+    .ceo-section { grid-template-columns: 1fr 1fr; }
+}
+.ceo-content p {
+    color: #a0aec0;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+.enjoy-signature {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: #fff;
+}
+.ceo-image img {
+    width: 100%;
+    border-radius: 16px;
+}
+.dashboard-footer {
+    background-color: #0c111f;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+    border-top: 1px solid #1f2937;
+}

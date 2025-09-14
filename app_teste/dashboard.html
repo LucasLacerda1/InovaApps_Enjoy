@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Painel do Membro - Enjoy 2025</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../base.css">
+    <link rel="stylesheet" href="../dashboard.css">
+</head>
+<body class="dashboard-body">
+
+    <header class="dashboard-header">
+        <div class="header-container">
+            <h1 class="logo">ENJOY <span class="text-gold">2025</span></h1>
+
+            <button class="menu-toggle" aria-controls="primary-navigation" aria-expanded="false">
+                <span class="sr-only">Abrir menu</span>
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="6"  x2="21" y2="6"/>
+                    <line x1="3" y1="12" x2="21" y2="12"/>
+                    <line x1="3" y1="18" x2="21" y2="18"/>
+                </svg>
+            </button>
+
+            <nav id="primary-navigation" class="main-nav">
+                <a href="dashboard.html">Home</a>
+                <a href="sobre.html">Sobre Nós</a>
+                <a href="membros.html">Membros</a>
+                <a href="parceiras.html">Empresas Parceiras</a>
+                <a href="ceo.html">Mensagem do CEO</a>
+                <a href="contato.html">Contato</a>
+                <a href="relatorio.html" class="admin-only" style="display: none; color: #f6ad55;">Relatórios</a>
+                <a href="index.html" class="logout-link">Logout</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="hero-content">
+            <h2 class="hero-title">MEMBERS BOOK <span class="text-gold">2025</span></h2>
+            <p class="hero-subtitle">Conectando líderes, gerando impacto e construindo negócios sustentáveis com a Enjoy.</p>
+            <a href="membros.html" class="hero-button">Conheça os Membros</a>
+        </div>
+    </section>
+
+    <section class="pillars-section">
+        <div class="pillars-container">
+            <div class="pillar-card"><h3>Inovação</h3><p>Ideias que transformam o futuro dos negócios.</p></div>
+            <div class="pillar-card"><h3>Conexão</h3><p>Uma comunidade de líderes unidos pelo propósito.</p></div>
+            <div class="pillar-card"><h3>Impacto</h3><p>Resultados reais para o mercado e para a sociedade.</p></div>
+        </div>
+    </section>
+
+    <section class="manifesto-section">
+        <div class="manifesto-container">
+            <h2 class="manifesto-title">NOSSO MANIFESTO</h2>
+            <p class="manifesto-text">Somos uma comunidade de empresários que se recusam a aceitar conceitos enlatados e que amam quebrar padrões para viver o novo. Somos a evolução do desenvolvimento empresarial. Se você tem humildade para reconhecer que, em algum aspecto, você pode ser ainda melhor e tem disposição para mudar... você é um de nós. Prepare-se para ser encorajado a novas jornadas sobre si. Bem-vindo ao universo dos negócios fora do comum.</p>
+            <h3 class="manifesto-subtitle">Juntos, somos Enjoy.</h3>
+            <div class="info-card">
+                <div class="info-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                </div>
+                <p class="info-text">Este <strong>Members Book</strong> é atualizado mensalmente e apresenta os membros ativos da comunidade. Para garantir a melhor experiência, recomendamos manter seus dados sempre atualizados junto à Enjoy.</p>
+                <p class="info-text">O material é voltado exclusivamente para networking interno, preservando a confidencialidade das informações e imagens aqui reunidas.</p>
+            </div>
+            <div class="footer-logo">
+                <h3 class="comunidade-text">COMUNIDADE</h3><h2 class="disruption-text">DISRUPTION</h2>
+            </div>
+        </div>
+    </section>
+
+    <footer class="dashboard-footer">
+        <p>© 2025 Enjoy Educação - Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="../main.js" defer></script>
+</body>
+</html>

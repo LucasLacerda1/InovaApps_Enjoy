@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Status do Membro - Enjoy 2025</title>
+    <link rel="stylesheet" href="../base.css">
+    <link rel="stylesheet" href="../dashboard.css"> <link rel="stylesheet" href="../status.css">   </head>
+<body class="status-body">
+
+    <main class="status-container">
+        <a href="javascript:history.back()" class="back-link">&larr; Voltar</a>
+        <h1 class="main-title">STATUS</h1>
+        
+        <div class="profile-header">
+            <img src="https://i.ibb.co/yBNp8bQ/jose_roberto_favato.png" alt="Foto de José Roberto Favato" class="profile-photo">
+            <div class="profile-info">
+                <h2 class="profile-name">José Roberto Favato</h2>
+                <p class="profile-company">Silvato Indústria</p>
+                <div class="social-links">
+                    <a href="#" class="social-icon">O</a>
+                    <a href="#" class="social-icon">M</a>
+                </div>
+            </div>
+        </div>
+        <p class="profile-bio">
+            Empresário à frente da Silvato Indústria, ele atua na confecção de fardamentos militares e artigos táticos. É apaixonado por inovação, gestão eficiente e desenvolvimento de projetos que unem tradição e modernidade. Também se dedica à expansão para novos mercados e à construção de uma cultura empresarial sustentável.
+        </p>
+        <div class="stats-grid">
+            <div class="stat-item"><p>Negócios fechados</p><span>30</span></div>
+            <div class="stat-item"><p>Valor total</p><span>120.000,00</span></div>
+            <div class="stat-item"><p>Indicações Recebidas</p><span>10</span></div>
+            <div class="stat-item"><p>Valor total por indicação</p><span>80.000,00</span></div>
+            <div class="stat-item"><p>Indicações Fornecidas</p><span>30</span></div>
+        </div>
+        <div class="total-value">
+            <p>Valor total Acumulado</p>
+            <span>700.000,00</span>
+        </div>
+        <div class="recommendation">
+            <p>
+                Recomendação <strong>Premium</strong>
+                <svg class="premium-star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/>
+                </svg>
+            </p>
+        </div>
+        
+        <div class="member-only">
+            <div class="action-buttons">
+                <a href="#" id="request-chat-btn" class="btn btn-secondary" 
+                   data-modal-title="Solicitação Enviada!" 
+                   data-modal-text="Sua mensagem foi enviada com sucesso. Em breve, o membro receberá a notificação.">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                    <span>Solicitar Bate-papo</span>
+                </a>
+                <a href="#" id="request-group-chat-btn" class="btn btn-secondary"
+                   data-modal-title="Grupo Solicitado!"
+                   data-modal-text="Sua solicitação para um bate-papo em grupo foi enviada com sucesso.">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                    <span>Bate-papo em Grupo</span>
+                </a>
+                <a href="#" id="recommend-member-btn" class="btn btn-secondary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><line x1="20" y1="8" x2="20" y2="14"></line><line x1="17" y1="11" x2="23" y2="11"></line></svg>
+                    <span>Indicar Membro</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-seal">
+            <div class="seal-logo">D</div>
+            <p class="seal-text">MEMBRO <br> DISRUPTION</p>
+        </div>
+    </main>
+
+    <div id="confirmation-modal" class="modal-overlay hidden">
+        <div class="modal-panel">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12a10 10 0 1 1-20 0 10 10 0 0 1 20 0Z"/><path d="m16 12-4-4-4 4"/><path d="M12 16V8"/></svg>
+            <h2 id="confirmation-modal-title" class="modal-title"></h2>
+            <p id="confirmation-modal-text" class="modal-text"></p>
+            <button id="confirmation-modal-close-btn" class="modal-button">OK</button>
+        </div>
+    </div>
+    <div id="recommend-modal" class="modal-overlay hidden">
+        <div class="modal-panel">
+            <h2 class="modal-title">Indicar um Membro</h2>
+            <p class="modal-text">Busque e selecione o membro que você deseja indicar.</p>
+            <input type="search" id="member-search-input" class="search-input" placeholder="Buscar por nome...">
+            <div id="member-list-container" class="member-list"></div>
+            <div class="modal-actions">
+                <button id="recommend-modal-cancel-btn" class="modal-button-secondary">Cancelar</button>
+                <button id="recommend-modal-confirm-btn" class="modal-button" disabled>Confirmar Indicação</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../main.js" defer></script>
+</body>
+</html>

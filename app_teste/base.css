@@ -1,0 +1,26 @@
+/* ... (Estilos Gerais, Fontes, Cores e Animações) ... */
+body { font-family: 'Montserrat', sans-serif; background-color: #0c111f; }
+.font-enjoy { font-family: 'Poppins', sans-serif; }
+.text-gold { color: #d4af37; } .bg-gold { background-color: #d4af37; } .border-gold { border-color: #d4af37; }
+.hover\:bg-gold-dark:hover { background-color: #c09b2e; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes scaleIn { from { transform: scale(0.95); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+@keyframes shake {
+  10%, 90% { transform: translate3d(-1px, 0, 0); } 20%, 80% { transform: translate3d(2px, 0, 0); }
+  30%, 50%, 70% { transform: translate3d(-4px, 0, 0); } 40%, 60% { transform: translate3d(4px, 0, 0); }
+}
+
+/* ================================= */
+/* Estilos de Formulário Compartilhados */
+/* ================================= */
+.form-label { display: block; margin-bottom: 0.5rem; font-size: 0.875rem; color: #a0aec0; }
+.form-input {
+    width: 100%; background-color: rgba(0, 0, 0, 0.3); border: 1px solid #4a5568; border-radius: 8px;
+    padding: 0.75rem 1rem; color: white; transition: border-color 0.3s;
+}
+.form-input:focus { outline: none; border-color: #d4af37; }
+.submit-button {
+    background-color: #d4af37; color: #0c111f; font-weight: bold; text-transform: uppercase; padding: 0.75rem 2.5rem;
+    border-radius: 8px; transition: all 0.3s ease; cursor: pointer; border: none;
+}
+.submit-button:hover { background-color: #c09b2e; transform: scale(1.05); }

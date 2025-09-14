@@ -1,0 +1,95 @@
+/* ======================================= */
+/* Estilos da Página de Empresas Parceiras */
+/* ======================================= */
+
+/* Seção "Em Construção" */
+.construction-section {
+    background-color: #0c111f; /* Azul escuro */
+    color: white;
+    padding: 8rem 2rem;
+    text-align: center;
+}
+
+.construction-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.construction-icon {
+    color: #b9955a; /* Dourado */
+    margin-bottom: 1.5rem;
+}
+
+.construction-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+}
+
+.construction-subtitle {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+/* Seção de Prévia dos Parceiros */
+.partners-preview-section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.preview-title {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 3rem;
+}
+
+.partners-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    opacity: 0.6; /* Deixa os cards com um ar de "em breve" */
+}
+
+.partner-card {
+    background-color: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.partner-logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ccc;
+    margin-bottom: 1.5rem;
+}
+
+.partner-name {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 0.75rem;
+}
+
+.partner-description {
+    font-size: 0.95rem;
+    color: #777;
+    line-height: 1.6;
+}

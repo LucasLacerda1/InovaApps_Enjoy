@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Comunidade Disruption</title>
+    <!-- Dependências -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../base.css">
+    <link rel="stylesheet" href="../login-form.css">
+</head>
+<body class="text-white flex flex-col items-center justify-center min-h-screen p-6">
+
+    <a href="login.html" class="absolute top-8 left-8 text-gold hover:underline">
+        &larr; Voltar
+    </a>
+
+    <div class="login-form-container">
+        <h1 id="login-title" class="text-2xl font-bold mb-8 text-center"></h1>
+        
+        <form id="login-form" class="w-full">
+            <div class="space-y-6">
+                <div>
+                    <label for="email" class="form-label">E-mail</label>
+                    <input type="email" id="email" name="email" class="form-input" required>
+                </div>
+                <div>
+                    <label for="password" class="form-label">Senha</label>
+                    <input type="password" id="password" name="password" class="form-input" required>
+                </div>
+            </div>
+
+            <div class="mt-8">
+                <button type="submit" class="submit-button w-full">Entrar</button>
+            </div>
+
+            <!-- Link "Esqueceu a senha?" adicionado aqui -->
+            <div class="mt-6 text-center">
+                <a href="#" class="forgot-password-link">Esqueceu a senha?</a>
+            </div>
+        </form>
+    </div>
+
+    <script src="../main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleção de Perfil - Comunidade Disruption</title>
+    <!-- Dependências -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../base.css">
+    <link rel="stylesheet" href="../login.css">
+</head>
+<body class="text-white flex flex-col items-center justify-center min-h-screen p-6">
+
+    <a href="index.html" class="absolute top-8 left-8 text-gold hover:underline">
+        &larr; Voltar
+    </a>
+
+    <div class="login-container">
+        <h1 class="text-2xl font-bold mb-8">Entrar como:</h1>
+        <div class="flex flex-col gap-4 w-full">
+            <!-- Link atualizado para passar o parâmetro 'Administrador' -->
+            <a href="login-form.html?profile=Administrador" class="choice-button bg-gold text-black">
+                Administrador
+            </a>
+            <!-- Link atualizado para passar o parâmetro 'Membro' -->
+            <a href="login-form.html?profile=Membro" class="choice-button border border-gold text-gold hover:bg-gold hover:text-black">
+                Membro
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>

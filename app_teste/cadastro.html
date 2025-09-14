@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Comunidade Disruption</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../base.css">
+    <link rel="stylesheet" href="../cadastro.css">
+
+    <style>
+        .form-select-arrow {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%239ca3af' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+            background-position: right 0.5rem center;
+            background-repeat: no-repeat;
+            background-size: 1.5em 1.5em;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+    </style>
+</head>
+<body class="text-white flex flex-col items-center justify-center min-h-screen p-6 sm:p-8">
+
+    <a href="index.html" class="absolute top-8 left-8 text-gold hover:underline z-10">
+        &larr; Voltar
+    </a>
+
+    <div class="form-container">
+        <h1 class="text-3xl font-bold mb-8 text-center">Crie sua Conta de Membro</h1>
+        <form id="registration-form" class="w-full">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
+
+                <div>
+                    <label for="nome" class="form-label">Nome Completo</label>
+                    <input type="text" id="nome" name="nome" class="form-input">
+                </div>
+                
+                <div>
+                    <label for="categoria" class="form-label">Categoria</label>
+                    <select id="categoria" name="categoria" class="form-input appearance-none form-select-arrow">
+                        <option class="bg-gray-700 text-white" value="" disabled selected>Selecione sua categoria</option>
+                        <option class="bg-gray-700 text-white" value="Advocacia">Advocacia</option>
+                        <option class="bg-gray-700 text-white" value="Arquitetura">Arquitetura</option>
+                        <option class="bg-gray-700 text-white" value="Comércio">Comércio</option>
+                        <option class="bg-gray-700 text-white" value="Comex">Comex</option>
+                        <option class="bg-gray-700 text-white" value="Construtora & Incorporadora">Construtora & Incorporadora</option>
+                        <option class="bg-gray-700 text-white" value="Consultoria">Consultoria</option>
+                        <option class="bg-gray-700 text-white" value="Contábil">Contábil</option>
+                        <option class="bg-gray-700 text-white" value="Educação">Educação</option>
+                        <option class="bg-gray-700 text-white" value="Engenharia">Engenharia</option>
+                        <option class="bg-gray-700 text-white" value="Eventos & Produções">Eventos & Produções</option>
+                        <option class="bg-gray-700 text-white" value="Finanças & Investimentos">Finanças & Investimentos</option>
+                        <option class="bg-gray-700 text-white" value="Food">Food</option>
+                        <option class="bg-gray-700 text-white" value="Franquias">Franquias</option>
+                        <option class="bg-gray-700 text-white" value="Imobiliário">Imobiliário</option>
+                        <option class="bg-gray-700 text-white" value="Licitação">Licitação</option>
+                        <option class="bg-gray-700 text-white" value="Logística & Transporte">Logística & Transporte</option>
+                        <option class="bg-gray-700 text-white" value="Marketing">Marketing</option>
+                        <option class="bg-gray-700 text-white" value="Recursos humanos">Recursos humanos</option>
+                        <option class="bg-gray-700 text-white" value="Saúde">Saúde</option>
+                        <option class="bg-gray-700 text-white" value="Seguros">Seguros</option>
+                        <option class="bg-gray-700 text-white" value="Tecnologia">Tecnologia</option>
+                        <option class="bg-gray-700 text-white" value="Veículos">Veículos</option>
+                    </select>
+                </div>
+
+                <div class="md:col-span-2">
+                    <label for="foto" class="form-label">Foto de Perfil</label>
+                    <input type="file" id="foto" name="foto" class="form-input file-input" accept="image/*">
+                </div>
+
+                <div>
+                    <label for="empresa" class="form-label">Empresa</label>
+                    <input type="text" id="empresa" name="empresa" class="form-input">
+                </div>
+
+                <div>
+                    <label for="data_nascimento" class="form-label">Data de Nascimento</label>
+                    <input type="date" id="data_nascimento" name="data_nascimento" class="form-input">
+                </div>
+
+                <div class="md:col-span-2">
+                    <label for="local" class="form-label">Local (Cidade / Estado)</label>
+                    <input type="text" id="local" name="local" class="form-input">
+                </div>
+
+                <div class="md:col-span-2">
+                    <label for="marcas" class="form-label">Marcas que representa</label>
+                    <input type="text" id="marcas" name="marcas" class="form-input" placeholder="Separe por vírgulas">
+                </div>
+
+                <div>
+                    <label for="faturamento" class="form-label">Faturamento Anual (empresa)</label>
+                    <select id="faturamento" name="faturamento" class="form-input appearance-none form-select-arrow">
+                        <option class="bg-gray-700 text-white" value="" disabled selected>Selecione uma faixa</option>
+                        <option class="bg-gray-700 text-white" value="R$ 20.000,00 a R$ 360.000,00">R$ 20.000,00 a R$ 360.000,00</option>
+                        <option class="bg-gray-700 text-white" value="R$ 360.000,00 a R$ 2.000.000,00">R$ 360.000,00 a R$ 2.000.000,00</option>
+                        <option class="bg-gray-700 text-white" value="R$ 2.000.000,00 a R$ 5.000.000,00">R$ 2.000.000,00 a R$ 5.000.000,00</option>
+                        <option class="bg-gray-700 text-white" value="R$ 5.000.000,00 a R$ 50.000.000,00">R$ 5.000.000,00 a R$ 50.000.000,00</option>
+                        <option class="bg-gray-700 text-white" value="R$ 50.000.000,00 a R$ 150.000.000,00">R$ 50.000.000,00 a R$ 150.000.000,00</option>
+                        <option class="bg-gray-700 text-white" value="Acima de R$ 150.000.000,00">Acima de R$ 150.000.000,00</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="tempo_atuacao" class="form-label">Tempo de Atuação</label>
+                    <input type="text" id="tempo_atuacao" name="tempo_atuacao" class="form-input" placeholder="Ex: 5 anos">
+                </div>
+                
+                <div class="md:col-span-2">
+                    <label for="resultados" class="form-label">Principais Resultados</label>
+                    <textarea id="resultados" name="resultados" rows="3" class="form-input"></textarea>
+                </div>
+                
+                <div>
+                    <label for="filhos" class="form-label">Número de Filhos</label>
+                    <input type="number" id="filhos" name="filhos" class="form-input" min="0" value="0">
+                </div>
+
+                <div>
+                    <label for="hobby" class="form-label">Hobby Principal</label>
+                    <textarea id="hobby" name="hobby" rows="1" class="form-input"></textarea>
+                </div>
+
+                <div class="md:col-span-2">
+                    <label for="instagram" class="form-label">Instagram</label>
+                    <input type="text" id="instagram" name="instagram" class="form-input" placeholder="@seuusuario ou link completo">
+                </div>
+
+                <div class="md:col-span-2">
+                    <label for="linkedin" class="form-label">LinkedIn</label>
+                    <input type="text" id="linkedin" name="linkedin" class="form-input" placeholder="Link do seu perfil">
+                </div>
+
+                <div class="md:col-span-2">
+                    <label for="email" class="form-label">E-mail</label>
+                    <input type="email" id="email" name="email" class="form-input">
+                </div>
+
+            </div>
+
+            <div id="error-message" class="error-message hidden mt-6 text-center">
+                Por favor, preencha todos os campos obrigatórios.
+            </div>
+            <div class="mt-4 text-center">
+                <button type="button" id="submit-button" class="submit-button">
+                    Enviar para Aprovação
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <div id="success-popup" class="popup-overlay hidden">
+        <div class="popup-content">
+            <svg class="text-green-500 w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+            <h2 class="text-2xl font-bold mt-4">Cadastro Enviado!</h2>
+            <p class="text-gray-400 mt-2">Seus dados foram enviados para análise da administração.</p>
+        </div>
+    </div>
+    
+    <script src="../main.js" defer></script>
+</body>
+</html>

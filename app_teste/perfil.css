@@ -1,0 +1,130 @@
+/* ======================================= */
+/* Estilos da Página de Perfil de Membro   */
+/* ======================================= */
+.profile-body {
+    background-color: #0c111f; /* Fundo escuro da página */
+    font-family: 'Poppins', sans-serif;
+    color: #a0aec0; /* cinza claro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+/* --- Estilo do Card (CARTA) --- */
+.profile-card {
+    background-color: #1a2a3a; /* Fundo azul escuro para o card */
+    border: 1px solid #4b5563; /* Borda sutil */
+    border-radius: 16px;
+    padding: 2.5rem;
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.back-link {
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    color: #fff;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 2rem;
+    display: inline-block;
+}
+
+.profile-header {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+.profile-header img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #b9955a;
+    margin: 0 auto;
+}
+.eternity-badge {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.5);
+    padding: 0.2rem 1rem;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+}
+.eternity-badge p:first-child { font-size: 0.6rem; letter-spacing: 2px; }
+.eternity-badge p:last-child { font-size: 1rem; font-weight: 700; letter-spacing: 2px; }
+
+.profile-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+}
+.profile-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 1.5rem;
+}
+.profile-bio {
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #b9955a;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #b9955a;
+    transition: all 0.3s;
+}
+.social-icon svg {
+    width: 20px;
+    height: 20px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 2;
+}
+.social-icon:hover {
+    background-color: #b9955a;
+    color: #0c111f;
+}
+
+.footer-seal { margin-top: 2rem; }
+.seal-icon {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #b9955a;
+    border-radius: 8px;
+    margin: 0 auto 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #b9955a;
+}
+.seal-icon span:first-child { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1.2rem; }
+.seal-icon .stars { font-size: 0.6rem; }
+.seal-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 0.2em;
+    color: #fff;
+}

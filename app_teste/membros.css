@@ -1,0 +1,142 @@
+/* ======================================= */
+/* Estilos da Página de Lista de Membros   */
+/* ======================================= */
+.members-body {
+    background-color: #f0ebe5; /* Fundo bege claro */
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    padding-top: 100px; /* Ajuste no padding para o novo header */
+    padding-bottom: 4rem;
+}
+
+/* --- Cabeçalho Padrão (Copiado do dashboard.css para consistência) --- */
+.dashboard-header {
+    background-color: #0c111f;
+    color: white;
+    padding: 1.5rem 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+.header-container {
+    display: flex;
+    justify-content: flex-start; /* Alinha os itens à esquerda */
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 4rem; /* Adiciona um espaço entre o logo e o menu */
+}
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 1.5rem;
+    letter-spacing: 2px; /* Adicionado para consistência */
+}
+.main-nav {
+    display: none; /* Escondido em telas pequenas */
+}
+/* Media query para exibir o menu em telas maiores */
+@media (min-width: 1024px) {
+    .main-nav {
+        display: flex;
+        gap: 1.2rem;
+        font-weight: 500;
+        align-items: center;
+    }
+    .main-nav a {
+        white-space: nowrap;
+        color: white; /* Cor padrão do link */
+        text-decoration: none;
+        transition: color 0.2s;
+    }
+    .main-nav a:hover {
+        color: #d4af37;
+    }
+}
+/* --- Fim dos Estilos do Cabeçalho --- */
+
+
+/* --- Conteúdo Principal --- */
+.members-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+.main-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    color: #555;
+    margin-bottom: 2rem;
+}
+.filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.view-options {
+    text-align: left;
+}
+.view-options .view-option {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #999;
+}
+.view-options .view-option.active {
+    color: #b9955a;
+}
+.filter-options {
+    text-align: left;
+}
+.filter-options .filter-link {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #555;
+    text-decoration: none;
+}
+.filter-options .filter-link.active {
+    font-weight: 700;
+}
+.segments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    margin-bottom: 4rem;
+}
+.segment-button {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    font-weight: 500;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.3s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+.segment-button:hover {
+    border-color: #b9955a;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.footer-logo { text-align: center; }
+.comunidade-text { font-size: 0.9rem; letter-spacing: 0.2em; color: #999; }
+.disruption-text {
+    font-family: 'Montserrat', sans-serif; font-size: 2rem; font-weight: 700;
+    letter-spacing: 0.3em; color: #b9955a;
+}

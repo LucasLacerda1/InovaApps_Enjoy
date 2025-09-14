@@ -1,0 +1,25 @@
+/* =================================== */
+/* Estilos do Formulário de Login Final */
+/* =================================== */
+.login-form-container {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 40px;
+    width: 100%;
+    max-width: 420px;
+    backdrop-filter: blur(10px);
+}
+
+/* --- Estilo para o link "Esqueceu a senha?" --- */
+.forgot-password-link {
+    color: #a0aec0; /* cinza claro */
+    font-size: 0.875rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.forgot-password-link:hover {
+    color: #d4af37; /* dourado */
+    text-decoration: underline;
+}

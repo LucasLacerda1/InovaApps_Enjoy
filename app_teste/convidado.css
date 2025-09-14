@@ -1,0 +1,101 @@
+/* ======================================= */
+/* Estilos do Formulário Carrossel (Convidado) */
+/* ======================================= */
+.carousel-body { 
+    background-color: #1a2a3a; 
+    color: #ffffff; 
+    font-family: 'Poppins', sans-serif; 
+    overflow: hidden; 
+}
+.carousel-header { 
+    position: fixed; top: 0; left: 0; width: 100%; padding: 1.5rem; 
+    text-align: left; 
+    z-index: 10; 
+}
+.carousel-container { 
+    display: flex; align-items: center; justify-content: center; 
+    height: 100vh; width: 100%; 
+}
+.form-slide {
+    width: 100%; max-width: 800px; padding: 1.5rem; text-align: left; 
+    position: absolute; opacity: 0; visibility: hidden;
+    transform: translateY(20px); transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+.form-slide.active { 
+    opacity: 1; visibility: visible; transform: translateY(0); 
+}
+
+/* --- Elementos de Pergunta --- */
+.question-header { 
+    display: flex; align-items: baseline; margin-bottom: 0.5rem; 
+}
+.question-number { 
+    color: #a0aec0; font-size: 1.25rem; margin-right: 0.75rem; 
+}
+.question-title { 
+    font-size: 1.5rem; 
+    font-weight: 300; /* <-- CORREÇÃO: Peso da fonte ajustado para 300 (light) */
+    line-height: 1.4; 
+    color: #ffffff; 
+}
+.question-subtitle { 
+    color: #a0aec0; font-size: 1rem; margin-bottom: 2rem; display: block; width: 100%;
+}
+
+/* --- Inputs, Opções e Botões --- */
+.carousel-input {
+    background: transparent; border: none; border-bottom: 2px solid #a0aec0; 
+    color: white; font-size: 1.5rem; padding: 0.5rem 0; width: 100%; outline: none;
+}
+.carousel-input:focus { 
+    border-bottom-color: #b9955a; 
+}
+.ok-button {
+    background-color: #b9955a; color: #1a2a3a; font-weight: bold; padding: 0.5rem 1.5rem; 
+    border-radius: 4px; cursor: pointer; margin-top: 1.5rem; 
+    transition: background-color 0.3s, transform 0.1s; border: none; font-size: 1rem;
+}
+.ok-button:hover { 
+    background-color: #d1b07e; 
+}
+.ok-button.shake { 
+    animation: shake 0.5s; 
+}
+.choices-container { 
+    display: flex; flex-direction: column; gap: 0.5rem; 
+}
+.choice-option {
+    display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 1rem; 
+    border: 1px solid #4a5568; border-radius: 4px; cursor: pointer; transition: all 0.3s; 
+    width: 100%; text-align: left; font-size: 1.1rem;
+}
+.choice-option:hover { 
+    border-color: #b9955a; background-color: rgba(185, 149, 90, 0.05); 
+}
+.choice-option.selected { 
+    border-color: #b9955a; background-color: rgba(185, 149, 90, 0.1); 
+}
+.choice-option div { 
+    display: flex; align-items: center; 
+}
+.choice-option span:first-child {
+    border: 1px solid #a0aec0; color: #a0aec0; padding: 0.2rem 0.5rem; 
+    margin-right: 1rem; font-size: 0.8rem; border-radius: 3px;
+}
+.checkmark { 
+    font-size: 1.5rem; color: #b9955a; visibility: hidden; 
+}
+.choice-option.selected .checkmark { 
+    visibility: visible; 
+}
+.carousel-footer { 
+    position: fixed; bottom: 0; right: 0; padding: 1.5rem; 
+    display: flex; align-items: center; gap: 1rem; font-size: 0.9rem; color: #a0aec0; 
+}
+.carousel-nav button { 
+    background-color: #b9955a; color: #1a2a3a; border: none; 
+    width: 30px; height: 30px; cursor: pointer; 
+}
+#prev-slide { 
+    transform: scaleY(-1); 
+}

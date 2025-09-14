@@ -1,0 +1,265 @@
+/* ======================================= */
+/* Estilos do Painel do Membro (Dashboard) */
+/* ======================================= */
+.dashboard-body {
+    background-color: #f0ebe5;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    padding-top: 85px; /* Espaço para o header fixo */
+}
+
+/* --- Cabeçalho --- */
+.dashboard-header {
+    background-color: #0c111f;
+    color: white;
+    padding: 1.5rem 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+.header-container {
+    display: flex;
+    justify-content: space-between; /* Mantém o logo à esquerda e o resto à direita */
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+/* --- Estilos do Menu Responsivo (Mobile-First) --- */
+
+/* Botão Hambúrguer (visível apenas em telas menores) */
+.menu-toggle {
+    background: transparent;
+    border: 0;
+    color: white;
+    cursor: pointer;
+    display: block; /* Visível por padrão (mobile) */
+}
+/* Esconde o botão em telas grandes */
+@media (min-width: 1024px) {
+    .menu-toggle {
+        display: none;
+    }
+}
+
+/* Navegação Principal */
+.main-nav {
+    display: none; /* Escondido por padrão */
+    position: absolute;
+    top: 100%; /* Começa logo abaixo do header */
+    left: 0;
+    right: 0;
+    background: #0c111f;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+}
+.main-nav.is-open {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    white-space: nowrap;
+    padding: 0.75rem 1rem;
+    width: 100%;
+    border-radius: 4px;
+}
+.main-nav a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #d4af37;
+}
+.admin-only {
+    font-weight: 700; /* Destaque para o link de admin */
+}
+
+/* Layout do Menu para Desktop */
+@media (min-width: 1024px) {
+    .main-nav {
+        display: flex;
+        position: static;
+        flex-direction: row;
+        background: none;
+        border-top: none;
+        width: auto;
+        padding: 0;
+        gap: 1.5rem;
+        align-items: center;
+    }
+    .main-nav a {
+        padding: 0;
+        width: auto;
+    }
+    .main-nav a:hover {
+        background-color: transparent;
+    }
+    .header-container {
+        justify-content: flex-start;
+        gap: 4rem;
+    }
+}
+
+
+/* --- Seção Hero --- */
+.hero-section {
+    background-color: #0c111f;
+    color: white;
+    padding: 8rem 2rem 6rem; /* Padding superior ajustado */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+}
+.hero-content { max-width: 800px; }
+.hero-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+.hero-subtitle {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+.hero-button {
+    background-color: #d4af37;
+    color: #0c111f;
+    padding: 0.8rem 2rem;
+    border-radius: 4px;
+    font-weight: 700;
+    transition: all 0.3s;
+}
+.hero-button:hover {
+    background-color: #c09b2e;
+    transform: translateY(-2px);
+}
+@media (min-width: 768px) { .hero-title { font-size: 3.5rem; } }
+
+/* --- Seção de Pilares --- */
+.pillars-section { padding: 4rem 2rem; }
+.pillars-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+@media (min-width: 768px) {
+    .pillars-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+.pillar-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2.5rem;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+.pillar-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #0c111f;
+}
+
+/* --- Seção Manifesto --- */
+.manifesto-section {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+.manifesto-container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+.manifesto-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+.manifesto-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    font-weight: 300;
+}
+.manifesto-subtitle {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 2rem 0;
+    color: #333;
+}
+.info-card {
+    border: 1px solid #b9955a;
+    border-radius: 8px;
+    padding: 2.5rem;
+    margin: 2rem 0;
+    position: relative;
+}
+.info-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #b9955a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #b9955a;
+    background-color: #f0ebe5;
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.info-text {
+    font-size: 1rem;
+    line-height: 1.7;
+    font-weight: 300;
+    color: #555;
+}
+.info-text:first-of-type {
+    margin-bottom: 1rem;
+}
+.info-text strong {
+    font-weight: 500;
+    color: #333;
+}
+.footer-logo {
+    margin-top: 4rem;
+}
+.comunidade-text {
+    font-size: 0.9rem;
+    letter-spacing: 0.2em;
+    color: #999;
+}
+.disruption-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    color: #b9955a;
+}
+
+/* --- Rodapé --- */
+.dashboard-footer {
+    background-color: #0c111f;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+}
